@@ -150,7 +150,7 @@ export const CLASSES_DATA = [
     instructor: "Kanchan Pawar",
     accentColor: "#E31837",
     bgGradient: "from-[#E31837]/10 via-transparent to-transparent",
-    image: PHOTOS.independenceDay,
+    image: 'https://ik.imagekit.io/ntmixl0bm/20250923_211659.heic',
     features: [
       "Beginner से Advanced तक Training",
       "Easy & Fun Step-by-Step Learning",
@@ -246,7 +246,7 @@ export const SCHEDULE_DATA = [
     time: "06:00 AM - 07:00 AM",
     days: "Mon - Sat",
     session: "Morning Batch",
-    instructor: "Elena Rostova",
+    instructor: "Kanchan Mam",
     spotsLeft: 4,
     status: "Open"
   },
@@ -257,7 +257,7 @@ export const SCHEDULE_DATA = [
     time: "07:15 AM - 08:15 AM",
     days: "Mon - Sat",
     session: "Morning Batch",
-    instructor: "Marcus Vance",
+    instructor: "Chaitanya Sir",
     spotsLeft: 3,
     status: "Filling Fast"
   },
@@ -268,7 +268,7 @@ export const SCHEDULE_DATA = [
     time: "05:30 PM - 06:30 PM",
     days: "Mon - Sat",
     session: "Evening Batch",
-    instructor: "Sophia & Team",
+    instructor: "Pratik Sir",
     spotsLeft: 5,
     status: "Open"
   },
@@ -279,7 +279,7 @@ export const SCHEDULE_DATA = [
     time: "11:00 AM - 1:00 PM (Hourly Batches)",
     days: "28th Sept - 10th Oct",
     session: "Morning Batches",
-    instructor: "Kanchan Pawar",
+   instructor: "Pratik Sir",
     spotsLeft: 10,
     status: "Filling Fast"
   },
@@ -290,7 +290,7 @@ export const SCHEDULE_DATA = [
     time: "4:00 PM - 7:00 PM (Hourly Batches)",
     days: "28th Sept - 10th Oct",
     session: "Evening Batches",
-    instructor: "Kanchan Pawar",
+    instructor: "Pratik Sir",
     spotsLeft: 8,
     status: "Filling Fast"
   }
