@@ -326,7 +326,6 @@ export const TESTIMONIALS_DATA = [
 export const FOOTER_DATA = {
   address: "Mission Stay Fit Wellness Studio, Beside Balaji Towers, near old Gokul sweets, N4, CIDCO.",
   phone: "8208536490 / 8329283681",
-  email: "hello@missionstayfit.com",
   instagram: "@missionstayfit",
   instagramUrl: "https://www.instagram.com/missionstayfit/",
   timing: "Mon - Sat: 6:00 AM - 9:00 PM | Sun: 7:00 AM - 1:00 PM"
