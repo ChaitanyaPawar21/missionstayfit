@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0E1013;
+  --color-brand-card: #16191E;
+  --color-brand-cream: #FAF8F5;
+  --color-brand-soft: #EFECE6;
+  --color-brand-green: #3E4D40;
+  --color-brand-green-light: #586B5A;
+  --color-brand-terracotta: #C26D53;
+  --color-brand-terracotta-light: #D8836A;
+  --color-brand-text: #14171A;
+  --color-brand-muted: #71717A;
+  --color-brand-border: #E2DDD5;
+
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Syne', sans-serif;
+  --font-editorial: 'Syne', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #14171A;
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Glassmorphism & Custom Effects */
+.glass-nav {
+  background: rgba(250, 248, 245, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 221, 213, 0.6);
+}
+
+.glass-nav-scrolled {
+  background: rgba(14, 16, 19, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 221, 213, 0.7);
+}
+
+.glass-card-dark {
+  background: rgba(22, 25, 30, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4BEB4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E4D40;
+}
+
+/* Magnetic Hover Lift */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+/* Noise overlay canvas style */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
