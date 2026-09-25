@@ -6,7 +6,6 @@ import Classes from './components/Classes';
 import ClassDetailModal from './components/ClassDetailModal';
 import WhyUs from './components/WhyUs';
 import Gallery from './components/Gallery';
-import Schedule from './components/Schedule';
 import Testimonials from './components/Testimonials';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
@@ -114,9 +113,6 @@ export default function App() {
 
           {/* 5. Studio Experience Gallery */}
           <Gallery />
-
-          {/* 6. Batch Timetable Schedule */}
-          <Schedule onBookBatch={handleOpenBooking} />
 
           {/* 7. Member Testimonials */}
           <Testimonials />

@@ -3,9 +3,9 @@ import { Sparkles, Flame, ArrowUpRight } from 'lucide-react';
 
 export default function CallToAction({ onOpenBooking }) {
   return (
-    <section className="py-20 md:py-32 bg-brand-cream relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-brand-cream relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="relative rounded-[2.5rem] bg-brand-dark text-white p-10 sm:p-16 md:p-24 overflow-hidden border border-white/15 shadow-2xl text-center">
+        <div className="relative rounded-[2.5rem] bg-brand-dark text-white p-8 sm:p-12 md:p-16 overflow-hidden border border-white/15 shadow-2xl text-center">
           {/* Dynamic Glow Accents */}
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-terracotta/25 rounded-full filter blur-[100px] pointer-events-none" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-green/25 rounded-full filter blur-[100px] pointer-events-none" />

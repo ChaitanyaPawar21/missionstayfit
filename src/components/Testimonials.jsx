@@ -18,11 +18,11 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 md:py-36 bg-brand-dark text-white relative overflow-hidden"
+      className="py-16 md:py-20 bg-brand-dark text-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-terracotta mb-3 block">
             MEMBER VOICES
           </span>

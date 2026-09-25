@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowUpRight, Clock, Flame, BellRing } from 'lucide-react';
-import { CLASSES_DATA } from '../data/studioData';
+import { Clock, Flame, BellRing, Calendar, User } from 'lucide-react';
+import { CLASSES_DATA, SCHEDULE_DATA } from '../data/studioData';
 
 export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }) {
   return (
     <section
       id="classes"
-      className="py-28 md:py-36 bg-brand-dark text-white relative overflow-hidden"
+      className="py-16 md:py-20 bg-brand-dark text-white relative overflow-hidden"
     >
       {/* Ambient background glows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/20 rounded-full filter blur-[120px] pointer-events-none" />
@@ -14,29 +14,29 @@ export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 pb-8 border-b border-white/10 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-12 pb-6 border-b border-white/10 gap-6">
           <div>
             <span className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-terracotta mb-3 block">
-              CURATED OFFERINGS
+              CLASSES & BATCH TIMINGS
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tight text-white">
               OUR CLASSES
             </h2>
           </div>
           <p className="max-w-md text-sm sm:text-base text-gray-300 font-light leading-relaxed">
-            Four specialized batch formats tailored to elevate physical strength, cardiovascular endurance, body flexibility, and mental well-being.
+            Pick a class and a batch time that suits you. Every batch runs in small groups with a trainer guiding you throughout.
           </p>
         </div>
 
         {/* Classes Layout */}
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-8 md:space-y-10">
           {CLASSES_DATA.map((item, index) => {
             const isEven = index % 2 === 0;
 
             return (
               <div
                 key={item.id}
-                className={`group relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-8 md:p-12 rounded-3xl transition-all duration-700 bg-gradient-to-br ${
+                className={`group relative grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center p-5 md:p-8 rounded-3xl transition-all duration-700 bg-gradient-to-br ${
                   item.isComingSoon
                     ? 'from-white/5 to-white/[0.02] border border-white/15'
                     : 'from-white/[0.07] to-white/[0.02] border border-white/10 hover:border-white/20'
@@ -44,13 +44,14 @@ export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }
               >
                 {/* Visual Image Side */}
                 <div
-                  className={`lg:col-span-6 relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] ${
+                  className={`lg:col-span-6 relative rounded-2xl overflow-hidden aspect-[16/10] ${
                     isEven ? 'lg:order-1' : 'lg:order-2'
                   }`}
                 >
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} class at Mission StayFit, Chhatrapati Sambhajinagar`}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${item.bgGradient}`} />
@@ -69,14 +70,10 @@ export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }
                   </div>
 
                   {!item.isComingSoon && (
-                    <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-xs text-gray-200 bg-black/50 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
+                    <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-center text-xs text-gray-200 bg-black/50 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
                       <span className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5 text-brand-terracotta-light" />
                         {item.duration}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <Flame className="w-3.5 h-3.5 text-brand-terracotta-light" />
-                        {item.calories}
                       </span>
                     </div>
                   )}
@@ -84,7 +81,7 @@ export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }
 
                 {/* Content Side */}
                 <div
-                  className={`lg:col-span-6 space-y-6 ${
+                  className={`lg:col-span-6 space-y-4 ${
                     isEven ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
@@ -115,8 +112,31 @@ export default function Classes({ onSelectClass, onJoinWaitlist, onOpenBooking }
                     ))}
                   </ul>
 
+                  {/* Batch Timings */}
+                  <div className="space-y-2 pt-2">
+                    {SCHEDULE_DATA.filter((b) => b.type.toLowerCase() === item.id).map((batch) => (
+                      <div
+                        key={batch.id}
+                        className="flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300"
+                      >
+                        <span className="flex items-center gap-1.5 font-semibold text-white">
+                          <Clock className="w-3.5 h-3.5 text-brand-terracotta-light" />
+                          {batch.time}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5 text-brand-terracotta-light" />
+                          {batch.days}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <User className="w-3.5 h-3.5 text-brand-terracotta-light" />
+                          {batch.instructor}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
                   {/* Actions */}
-                  <div className="pt-4 flex flex-wrap items-center gap-4">
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
                     {!item.isComingSoon ? (
                       <>
                         <button

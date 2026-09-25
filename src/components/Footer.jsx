@@ -20,13 +20,13 @@ export default function Footer({ onOpenBooking }) {
               <span className="flex flex-col leading-tight">
                 <span className="font-editorial text-xl font-bold tracking-widest">MISSION STAYFIT</span>
                 <span className="text-[10px] tracking-[0.25em] text-gray-400 font-medium">
-                  BOUTIQUE WELLNESS STUDIO
+                  FITNESS STUDIO
                 </span>
               </span>
             </a>
 
             <p className="text-sm text-gray-400 font-light max-w-sm leading-relaxed">
-              Your elevated space to move, sweat, breathe, and become the strongest, most balanced version of yourself.
+              Small group yoga, Tabata and Zumba batches in CIDCO N4 for all ages and fitness levels.
             </p>
 
             <div className="pt-2">
@@ -52,7 +52,7 @@ export default function Footer({ onOpenBooking }) {
                 <a href="#classes" className="hover:text-white transition-colors">💃 Zumba Dance Fitness</a>
               </li>
               <li>
-                <a href="#schedule" className="hover:text-white transition-colors">📅 Batch Schedule</a>
+                <a href="#classes" className="hover:text-white transition-colors">📅 Batch Schedule</a>
               </li>
             </ul>
           </div>

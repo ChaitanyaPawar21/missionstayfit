@@ -33,16 +33,10 @@ export const VIDEOS = {
 export const HERO_BACKGROUND = PHOTOS.independenceDay;
 
 export const HERO_DATA = {
-  badge: "BOUTIQUE WELLNESS & FITNESS STUDIO",
+  badge: "FITNESS STUDIO • CIDCO N4",
   headline: "MOVE BETTER. FEEL STRONGER. LIVE FULLY.",
   tagline: "MOVE. BREATHE. BECOME.",
-  subtext: "Your space to move, sweat, breathe, and become the strongest version of yourself.",
-  stats: [
-    { value: "4.9★", label: "Member Satisfaction" },
-    { value: "3", label: "Signature Batches" },
-    { value: "100%", label: "Certified Instructors" },
-    { value: "1000+", label: "Lives Transformed" }
-  ]
+  subtext: "Yoga, Tabata and Zumba batches for all ages and fitness levels, led by trainers who know you by name. Come for a trial class and see if it suits you."
 };
 
 export const CLASS_OPTIONS = [
@@ -54,22 +48,8 @@ export const CLASS_OPTIONS = [
 
 export const ABOUT_DATA = {
   headline: "Wellness Is Not a Destination. It's a Lifestyle.",
-  subtitle: "AN ELEVATED BOUTIQUE EXPERIENCE",
-  description: "Mission StayFit was founded on a simple truth: fitness should energize your soul, not drain it. We created a welcoming, high-end sanctuary where movement becomes art, strength is built with precision, and every breath brings clarity.",
-  highlights: [
-    {
-      title: "Mindful Architecture",
-      desc: "Designed with generous whitespace, soothing tones, and natural sunlight for optimal mental clarity."
-    },
-    {
-      title: "Curated Group Energy",
-      desc: "Intimate batch sizes ensuring personal instruction and a tight-knit supportive community."
-    },
-    {
-      title: "Holistic Progression",
-      desc: "Combining high-intensity conditioning, rhythmic dance cardio, and restorative breathwork."
-    }
-  ],
+  subtitle: "ABOUT US",
+  description: "Mission StayFit is a neighbourhood fitness studio in CIDCO N4, Chhatrapati Sambhajinagar. We run small group batches for yoga, Tabata and Zumba, so every member gets proper attention from the trainer. Whether you are just starting out or have been working out for years, you will find a batch that fits your routine and your level.",
   images: {
     main: PHOTOS.communityHall,
     secondary: 'https://ik.imagekit.io/ntmixl0bm/WhatsApp%20Image%202026-09-25%20at%2011.22.45%20AM.jpeg',
@@ -165,7 +145,7 @@ export const WHY_US_DATA = [
     id: "purpose",
     number: "01",
     headline: "MOVE WITH PURPOSE",
-    subtext: "Every session is meticulously programmed to elevate strength, endurance, and mental clarity without burnout."
+    subtext: "Every session is planned to build strength and stamina step by step, without pushing you to burnout."
   },
   {
     id: "everybody",
@@ -182,8 +162,8 @@ export const WHY_US_DATA = [
   {
     id: "sanctuary",
     number: "04",
-    headline: "LUXURY AMBIENCE",
-    subtext: "State-of-the-art acoustics, purified air, premium mat equipment, and high-standard hygiene for your peace of mind."
+    headline: "CLEAN & COMFORTABLE",
+    subtext: "A clean, well-ventilated hall with good sound, mats and equipment, kept tidy after every batch."
   }
 ];
 
@@ -324,7 +304,7 @@ export const TESTIMONIALS_DATA = [
 ];
 
 export const FOOTER_DATA = {
-  address: "Mission Stay Fit Wellness Studio, Beside Balaji Towers, near old Gokul sweets, N4, CIDCO.",
+  address: "Mission Stay Fit Wellness Studio, Beside Balaji Towers, near old Gokul sweets, N4, CIDCO, Chhatrapati Sambhajinagar, Maharashtra 431003.",
   phone: "8208536490 / 8329283681",
   instagram: "@missionstayfit",
   instagramUrl: "https://www.instagram.com/missionstayfit/",

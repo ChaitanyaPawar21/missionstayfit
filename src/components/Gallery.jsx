@@ -19,14 +19,14 @@ export default function Gallery() {
   return (
     <section
       id="experience"
-      className="py-24 md:py-36 bg-brand-dark text-white relative overflow-hidden"
+      className="py-16 md:py-20 bg-brand-dark text-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="mb-16 pb-8 border-b border-white/10">
+        <div className="mb-10 pb-6 border-b border-white/10">
           <span className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-terracotta mb-3 block flex items-center gap-2">
             <Sparkles className="w-3.5 h-3.5" />
-            VISUAL SANCTUARY
+            PHOTOS & VIDEOS
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white">
             STUDIO EXPERIENCE

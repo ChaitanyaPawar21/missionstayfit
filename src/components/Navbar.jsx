@@ -23,16 +23,13 @@ export default function Navbar({ onOpenBooking, onOpenWaitlist }) {
     { name: 'Classes', href: '#classes' },
     { name: 'Why Us', href: '#why-us' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Schedule', href: '#schedule' },
     { name: 'Stories', href: '#testimonials' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'glass-nav-scrolled py-3 shadow-2xl'
-          : 'glass-nav py-5'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-brand-dark border-b border-white/10 ${
+        scrolled ? 'py-3 shadow-2xl' : 'py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -50,9 +47,7 @@ export default function Navbar({ onOpenBooking, onOpenWaitlist }) {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors duration-300 relative group py-1 ${
-                scrolled ? 'text-gray-200 hover:text-white' : 'text-brand-text hover:text-brand-green'
-              }`}
+              className="text-sm font-medium tracking-wide text-gray-200 hover:text-white transition-colors duration-300 relative group py-1"
             >
               {link.name}
               <span className={`absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full ${
@@ -66,11 +61,7 @@ export default function Navbar({ onOpenBooking, onOpenWaitlist }) {
         <div className="hidden sm:flex items-center gap-4">
           <button
             onClick={() => onOpenBooking(null)}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 shadow-md ${
-              scrolled
-                ? 'bg-white text-brand-dark hover:bg-brand-terracotta hover:text-white'
-                : 'bg-brand-dark text-white hover:bg-brand-green'
-            }`}
+            className="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 shadow-md bg-white text-brand-dark hover:bg-brand-terracotta hover:text-white"
           >
             <span>Join a Batch</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -80,9 +71,7 @@ export default function Navbar({ onOpenBooking, onOpenWaitlist }) {
         {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`lg:hidden p-2.5 rounded-full transition-colors z-50 ${
-            scrolled || mobileMenuOpen ? 'text-white hover:bg-white/10' : 'text-brand-dark hover:bg-black/5'
-          }`}
+          className="lg:hidden p-2.5 rounded-full transition-colors z-50 text-white hover:bg-white/10"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

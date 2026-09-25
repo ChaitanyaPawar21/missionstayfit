@@ -15,19 +15,19 @@ export default function WhyUs() {
   return (
     <section
       id="why-us"
-      className="py-24 md:py-36 bg-brand-cream text-brand-text relative overflow-hidden"
+      className="py-16 md:py-20 bg-brand-cream text-brand-text relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-2xl mb-16 md:mb-20">
+        <div className="max-w-2xl mb-10">
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-terracotta mb-3 block">
-            THE STAYFIT DIFFERENCE
+            WHY JOIN US
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-brand-dark tracking-tight leading-tight">
             WHY MISSION STAYFIT?
           </h2>
           <p className="text-base sm:text-lg text-brand-muted font-light mt-4">
-            We reject crowded gym chaos in favor of quiet luxury, intentional movement, and transformative energy.
+            No crowded gym floors. Just small batches, friendly trainers and workouts that actually fit your day.
           </p>
         </div>
 
@@ -36,10 +36,10 @@ export default function WhyUs() {
           {WHY_US_DATA.map((item) => (
             <div
               key={item.id}
-              className="p-8 rounded-3xl bg-white border border-brand-border shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group transition-all duration-300"
+              className="p-6 rounded-3xl bg-white border border-brand-border shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group transition-all duration-300"
             >
               <div>
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-5">
                   <span className="text-3xl font-display font-extrabold text-brand-dark/20 group-hover:text-brand-terracotta transition-colors duration-300">
                     {item.number}
                   </span>
@@ -55,11 +55,6 @@ export default function WhyUs() {
                 <p className="text-sm text-brand-muted font-light leading-relaxed">
                   {item.subtext}
                 </p>
-              </div>
-
-              <div className="mt-8 pt-4 border-t border-brand-border/60 flex items-center gap-2 text-xs font-semibold text-brand-green group-hover:translate-x-1 transition-transform">
-                <span>Learn Philosophy</span>
-                <span>→</span>
               </div>
             </div>
           ))}
